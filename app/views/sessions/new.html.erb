@@ -1,0 +1,19 @@
+<h1 class='text-center'>Log in</h1>
+
+<div class="row justify-content-center">
+  <div class="card col-lg-4 col-md-6">
+    <div class="card-body">
+      <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.submit "Log in", class: "mt-2 btn btn-outline-dark" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

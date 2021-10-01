@@ -1,0 +1,36 @@
+<h1 class='text-center'>Sign up</h1>
+<div class="row justify-content-center">
+
+  <div class="card col-lg-4 col-md-6">
+    <div class="card-body">
+      <%= form_with(model: @user, local: true) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'mb-1 form-control' %>
+
+        <%= f.label :surname %>
+        <%= f.text_field :surname, class: 'mb-1 form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'mb-1 form-control' %>
+
+        <%= f.label :city %>
+        <%= f.text_field :city, class: 'mb-1 form-control' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'mb-1 form-control' %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'mb-1 form-control' %>
+
+        <div class="form-check mt-2">
+          <%= f.check_box :role, value:'doctor', class: 'form-check-input' %>
+          <%= f.label "I'm a doctor", class:'form-check-label' %>
+        </div>
+
+        <%= f.submit "Create my account", class: "mt-2 btn btn-outline-dark" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<%= form_with url: doctors_path, method: :get, class: 'd-flex mb-2 mt-2' do |form| %>
+  <%= form.text_field local_assigns[:param], placeholder: local_assigns[:place_holder], class: 'form-control me-2'%>
+  <%= button_tag tpe: 'submit', class: 'btn btn-outline-dark' do %>
+    <div class="row">
+      <i class="fa fa-search col-2 mt-1"></i><span class="col-2">Find<span>
+    </div>
+  <% end %>
+<% end %>

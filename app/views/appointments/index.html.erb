@@ -1,0 +1,9 @@
+<h1>Appointments</h1>
+<% @appointments.each do |appointment| %>
+  <% if current_user.doctor? %>
+    <%= render "card", user: patient(appointment), appointment: appointment %>
+  <% else %>
+    <%= render "card", user: doctor(appointment), appointment: appointment %>
+  <%end%>
+<% end %>
+<%= paginate @appointments %>
