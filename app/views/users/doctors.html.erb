@@ -1,6 +1,7 @@
 <h1>Doctors' directory</h1>
 <div class="row justify-content-center">
   <div class="col-md-6">
+    <input type="hidden" id="last_query" value="<%= params[:query_city] %>">
     <%= render "form_search", param: :query_city, place_holder: 'Search by city' %>
       <a id="adv-options" class="adv-options"><%= fa_icon "angle-down", id: 'faarrow' %> Advanced Search options</a>
     <div id="second_search" class="hidden">

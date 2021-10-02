@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def doctors
     @doctors = User.where(role: 1).page(params[:page]).per(10)
     @doctors = @doctors.where(full_query) if full_query
