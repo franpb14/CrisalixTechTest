@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  #TODObefore_action :logged_in_user
 
   def doctors
     @doctors = User.where(role: 1).page(params[:page]).per(10)

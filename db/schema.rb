@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 2021_09_30_211639) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-# Could not dump table "appointments" because of following StandardError
-#   Unknown type 'attachment' for column 'photo1'
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "date"
+  end
 
   create_table "user_appointments", force: :cascade do |t|
     t.integer "user_id", null: false
