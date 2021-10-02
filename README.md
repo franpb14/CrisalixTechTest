@@ -1,24 +1,8 @@
-# README
+# Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. clone this repository `git clone https://github.com/franpb14/CrisalixTechTest.git`
+2. move to the folder `cd CrisalixTechTest`
+3. install the framework dependencies `bundle install`
+4. install some javascript dependencies `npm install`
+5. set up the database`rails db:migrate`
+6. and start de app :rocket: `rails s`
